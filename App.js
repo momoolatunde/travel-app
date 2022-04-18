@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import tw from 'twrnc';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <>
       <View style={styles.centerContainer}>
         <Text style={styles.header}> Hello World</Text>
+        <AntDesign name="upcircle" size={32} color="white" />
       </View>
     </>
   );
