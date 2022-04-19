@@ -17,10 +17,10 @@ const styles = StyleSheet.create({
     flex-auto
     justify-center
     items-center
-    bg-red-500
+    bg-white
   `,
 
   header: tw`
-    text-3xl font-bold text-white
+    text-3xl font-bold text-black
    `,
 });
