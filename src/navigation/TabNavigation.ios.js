@@ -16,7 +16,7 @@ export default function TabNavigator() {
             component={screen}
             options={{
               tabBarIcon: () => {
-                return <AntDesignIcon icon={icon} size={32} color="black" />;
+                return <AntDesignIcon icon={icon} size={28} color="black" />;
               },
             }}
           />
