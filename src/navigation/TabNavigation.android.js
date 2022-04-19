@@ -1,6 +1,6 @@
 import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import AntDesignIcon from '../base/icon';
+import {AntDesignIcon} from '../base/icon';
 import {tabs} from '../base/tabs';
 import tw from 'twrnc';
 
