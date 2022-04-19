@@ -1,12 +1,31 @@
 import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import AntDesignIcon from '../base/icon';
+import {tabs} from '../base/tabs';
+import tw from 'twrnc';
 
 export default function TabNavigator() {
   const Tab = createMaterialBottomTabNavigator();
 
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
+    <Tab.Navigator
+      barStyle={[tw`bg-white`, {borderTopWidth: 0}]}
+      labeled={false}
+      shifting={false}>
+      {tabs.map(({name, icon, screen}) => {
+        return (
+          <Tab.Screen
+            key={name}
+            name={name}
+            component={screen}
+            options={{
+              tabBarIcon: () => {
+                return <AntDesignIcon icon={icon} size={24} color="black" />;
+              },
+            }}
+          />
+        );
+      })}
     </Tab.Navigator>
   );
 }
