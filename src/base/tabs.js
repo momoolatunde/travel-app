@@ -1,3 +1,4 @@
+import {Platform} from 'react-native';
 import HomeScreen from '../screen/home/HomeScreen';
 import CaseScreen from '../screen/case/CaseScreen';
 import AccountScreen from '../screen/account/AccountScreen';
@@ -7,21 +8,21 @@ export const tabs = [
   {
     name: 'Home',
     screen: HomeScreen,
-    icon: 'home',
+    icon: Platform.OS === 'ios' ? 'ios-home-outline' : 'md-home-outline',
   },
   {
     name: 'Case',
     screen: CaseScreen,
-    icon: 'laptop',
+    icon: Platform.OS === 'ios' ? 'ios-laptop-outline' : 'md-laptop-outline',
   },
   {
     name: 'Account',
     screen: AccountScreen,
-    icon: 'barchart',
+    icon: Platform.OS === 'ios' ? 'ios-scan-outline' : 'md-scan-outline',
   },
   {
     name: 'Profile',
     screen: ProfileScreen,
-    icon: 'user',
+    icon: Platform.OS === 'ios' ? 'ios-rose-outline' : 'md-rose-outline',
   },
 ];

@@ -1,6 +1,6 @@
 import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import {AntDesignIcon} from '../base/icon';
+import {Ionicon} from '../base/icon';
 import {tabs} from '../base/tabs';
 import tw from 'twrnc';
 
@@ -20,7 +20,7 @@ export default function TabNavigator() {
             component={screen}
             options={{
               tabBarIcon: () => {
-                return <AntDesignIcon icon={icon} size={24} color="black" />;
+                return <Ionicon icon={icon} size={24} color="black" />;
               },
             }}
           />
