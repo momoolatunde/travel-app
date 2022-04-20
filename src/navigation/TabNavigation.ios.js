@@ -26,7 +26,6 @@ export default function TabNavigator() {
                   <Ionicon
                     icon={icon}
                     size={28}
-                    color="black"
                     style={focused ? tw`text-red-800` : tw`text-gray-500`}
                   />
                 );
