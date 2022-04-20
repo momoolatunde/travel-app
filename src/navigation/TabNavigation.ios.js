@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import AntDesignIcon from '../base/icon';
+import {Ionicon} from '../base/icon';
 import {tabs} from '../base/tabs';
 import tw from 'twrnc';
 
@@ -21,8 +21,15 @@ export default function TabNavigator() {
             name={name}
             component={screen}
             options={{
-              tabBarIcon: () => {
-                return <AntDesignIcon icon={icon} size={28} color="black" />;
+              tabBarIcon: ({focused}) => {
+                return (
+                  <Ionicon
+                    icon={icon}
+                    size={28}
+                    color="black"
+                    style={focused ? tw`text-red-800` : tw`text-gray-500`}
+                  />
+                );
               },
             }}
           />
